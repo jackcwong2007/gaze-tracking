@@ -16,21 +16,8 @@ def draw_landmarks_on_image(rgb_image, detection_result):
   for idx in range(len(face_landmarks_list)):
     face_landmarks = face_landmarks_list[idx]
 
-    # Draw the face landmarks.
+    # Draw left and right eye landmarks
 
-
-    drawing_utils.draw_landmarks(
-        image=annotated_image,
-        landmark_list=face_landmarks,
-        connections=vision.FaceLandmarksConnections.FACE_LANDMARKS_TESSELATION,
-        landmark_drawing_spec=None,
-        connection_drawing_spec=drawing_styles.get_default_face_mesh_tesselation_style())
-    drawing_utils.draw_landmarks(
-        image=annotated_image,
-        landmark_list=face_landmarks,
-        connections=vision.FaceLandmarksConnections.FACE_LANDMARKS_CONTOURS,
-        landmark_drawing_spec=None,
-        connection_drawing_spec=drawing_styles.get_default_face_mesh_contours_style())
     drawing_utils.draw_landmarks(
         image=annotated_image,
         landmark_list=face_landmarks,
